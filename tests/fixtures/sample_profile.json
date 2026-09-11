@@ -1,0 +1,13 @@
+{
+  "user_id": "test_user_001",
+  "age": 42,
+  "sex": "male",
+  "height_cm": 175.0,
+  "weight_kg": 82.0,
+  "activity_level": "moderately_active",
+  "primary_goal": "weight_loss",
+  "dietary_preference": "vegetarian",
+  "allergies": ["peanuts"],
+  "health_conditions": ["diabetes", "hypertension"],
+  "cuisine_preferences": "Indian"
+}

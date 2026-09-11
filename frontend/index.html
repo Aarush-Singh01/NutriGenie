@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NutriGenie – AI Nutrition Assistant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+
+  <!-- ── Header ──────────────────────────────────────────────────────── -->
+  <header class="bg-green-700 text-white shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="text-3xl">🥗</span>
+        <div>
+          <h1 class="text-2xl font-bold tracking-tight">NutriGenie</h1>
+          <p class="text-green-200 text-xs">AI-Powered Personalized Nutrition Agent</p>
+        </div>
+      </div>
+      <div class="text-xs text-green-200 text-right hidden sm:block">
+        <p>IBM Granite · watsonx Orchestrate · RAG</p>
+        <p>AICTE / IBM Bob Hackathon</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Medical Disclaimer Banner ───────────────────────────────────── -->
+  <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-xs px-4 py-2 text-center">
+    ⚠️ <strong>Not Medical Advice.</strong> NutriGenie provides general nutrition information only. Always consult a qualified healthcare professional before making dietary changes.
+  </div>
+
+  <!-- ── Tab Navigation ───────────────────────────────────────────────── -->
+  <nav class="bg-white border-b border-gray-200 sticky top-0 z-10 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4">
+      <ul class="flex overflow-x-auto gap-1 py-1" id="tab-nav">
+        <li><button class="tab-btn active" data-tab="profile">👤 Profile</button></li>
+        <li><button class="tab-btn" data-tab="dashboard">📊 Dashboard</button></li>
+        <li><button class="tab-btn" data-tab="meal-plan">🍽️ Meal Plan</button></li>
+        <li><button class="tab-btn" data-tab="food-log">📝 Food Log</button></li>
+        <li><button class="tab-btn" data-tab="chat">💬 Chat</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Main Content ─────────────────────────────────────────────────── -->
+  <main class="max-w-6xl mx-auto px-4 py-6">
+
+    <!-- Profile Tab -->
+    <div id="tab-profile" class="tab-content">
+      <div id="profile-root"></div>
+    </div>
+
+    <!-- Dashboard Tab -->
+    <div id="tab-dashboard" class="tab-content hidden">
+      <div id="dashboard-root"></div>
+    </div>
+
+    <!-- Meal Plan Tab -->
+    <div id="tab-meal-plan" class="tab-content hidden">
+      <div id="meal-plan-root"></div>
+    </div>
+
+    <!-- Food Log Tab -->
+    <div id="tab-food-log" class="tab-content hidden">
+      <div id="food-log-root"></div>
+    </div>
+
+    <!-- Chat Tab -->
+    <div id="tab-chat" class="tab-content hidden">
+      <div id="chat-root"></div>
+    </div>
+
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────────────────────── -->
+  <footer class="text-center text-xs text-gray-400 py-4 border-t border-gray-200 mt-8">
+    NutriGenie v1.0 · AICTE / IBM Bob Hackathon · Powered by IBM Granite &amp; watsonx Orchestrate
+  </footer>
+
+  <!-- ── Scripts ──────────────────────────────────────────────────────── -->
+  <script src="components/profile.js"></script>
+  <script src="components/dashboard.js"></script>
+  <script src="components/meal_plan.js"></script>
+  <script src="components/food_log.js"></script>
+  <script src="components/chat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
